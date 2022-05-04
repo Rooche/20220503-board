@@ -79,7 +79,7 @@ public class NoticeServiceImpl implements NoticeService {
 	public int noticeInsert(NoticeVO vo) {
 		//한명추가
 		int n = 0;
-		String sql = "INSERT INTO NOTICE VALUES(b_id.nextval,?,?,?,sysdate,0);";
+		String sql = "INSERT INTO NOTICE VALUES(b_id.nextval,?,?,?,sysdate,0)";
 		try {
 			psmt = conn.prepareCall(sql);
 			psmt.setint(1, vo.getId());
